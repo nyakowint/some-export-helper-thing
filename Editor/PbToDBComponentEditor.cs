@@ -5,12 +5,12 @@ using UnityEngine;
 
 namespace Nyako.ExportHelper.Editor
 {
-    [CustomEditor(typeof(PBToDBComponent))]
+    [CustomEditor(typeof(ExportHelperComponent))]
     public class PbToDBComponentEditor : UnityEditor.Editor
     {
         public override void OnInspectorGUI()
         {
-            var comp = (PBToDBComponent)target;
+            var comp = (ExportHelperComponent)target;
 
             EditorGUILayout.LabelField("Export Settings", EditorStyles.boldLabel);
             EditorGUILayout.Space(4);
@@ -72,7 +72,7 @@ namespace Nyako.ExportHelper.Editor
                 EditorUtility.SetDirty(target);
         }
 
-        private static void RunExport(PBToDBComponent comp)
+        private static void RunExport(ExportHelperComponent comp)
         {
             // Walk up to the avatar root (component may be on a child, but usually on the root)
             var avatarRoot = comp.gameObject;

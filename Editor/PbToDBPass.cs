@@ -13,7 +13,7 @@ namespace Nyako.ExportHelper.Editor
             if (ctx.PlatformProvider.QualifiedName != WellKnownPlatforms.Generic)
                 return;
 
-            var component = ctx.AvatarRootObject.GetComponentInChildren<PBToDBComponent>(true);
+            var component = ctx.AvatarRootObject.GetComponentInChildren<ExportHelperComponent>(true);
             if (component == null)
                 return;
 
