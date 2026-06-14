@@ -31,7 +31,7 @@ namespace Nyako.ExportHelper.Editor
             if (pb.version == VRCPhysBoneBase.Version.Version_1_1)
             {
                 Debug.LogWarning(
-                    $"[BeatSaberExport] {pb.name}: PhysBone Version 1.1 (SquishyBones) detected — " +
+                    $"[LN Export Helper] {pb.name}: PhysBone Version 1.1 (SquishyBones) detected — " +
                     "stiffness and gravity values will be approximated.");
             }
 
@@ -62,7 +62,7 @@ namespace Nyako.ExportHelper.Editor
                     chains.Add(rootBone.GetChild(i));
 
                 Debug.LogWarning(
-                    $"[BeatSaberExport] {pb.name}: multi-child bone split into {childCount} separate " +
+                    $"[LN Export Helper] {pb.name}: multi-child bone split into {childCount} separate " +
                     "DynamicBone components (one per direct child branch).");
             }
             else if (pb.multiChildType == VRCPhysBoneBase.MultiChildType.First && childCount > 0)
@@ -126,7 +126,7 @@ namespace Nyako.ExportHelper.Editor
             {
                 db.m_FreezeAxis = DynamicBone.FreezeAxis.None;
                 Debug.LogWarning(
-                    $"[BeatSaberExport] {pb.name}: limitType '{pb.limitType}' has no DynamicBone equivalent — " +
+                    $"[LN Export Helper] {pb.name}: limitType '{pb.limitType}' has no DynamicBone equivalent — " +
                     "FreezeAxis set to None.");
             }
         }
@@ -151,13 +151,13 @@ namespace Nyako.ExportHelper.Editor
         private static void WarnDroppedFields(VRCPhysBoneBase pb)
         {
             if (pb.gravityFalloff != 0f)
-                Debug.LogWarning($"[BeatSaberExport] {pb.name}: 'gravityFalloff' has no DynamicBone equivalent — dropped.");
+                Debug.LogWarning($"[LN Export Helper] {pb.name}: 'gravityFalloff' has no DynamicBone equivalent — dropped.");
 
             if (pb.isAnimated)
-                Debug.LogWarning($"[BeatSaberExport] {pb.name}: 'isAnimated' has no DynamicBone equivalent — dropped.");
+                Debug.LogWarning($"[LN Export Helper] {pb.name}: 'isAnimated' has no DynamicBone equivalent — dropped.");
 
             if (pb.maxStretch != 0f || pb.maxSquish != 0f || pb.stretchMotion != 0f)
-                Debug.LogWarning($"[BeatSaberExport] {pb.name}: SquishyBone stretch/squish parameters have no DynamicBone equivalent — dropped.");
+                Debug.LogWarning($"[LN Export Helper] {pb.name}: SquishyBone stretch/squish parameters have no DynamicBone equivalent — dropped.");
         }
 
         /// <summary>
@@ -178,7 +178,7 @@ namespace Nyako.ExportHelper.Editor
             var packageInfo = UnityEditor.PackageManager.PackageInfo.FindForAssetPath("Packages/com.vrchat.avatars");
             if (packageInfo == null)
             {
-                Debug.LogError("[BeatSaberExport] VRChat Avatars SDK package not found.");
+                Debug.LogError("[LN Export Helper] VRChat Avatars SDK package not found.");
                 return;
             }
 
@@ -186,7 +186,7 @@ namespace Nyako.ExportHelper.Editor
                 ver < new System.Version(3, 5, 0))
             {
                 Debug.LogWarning(
-                    $"[BeatSaberExport] VRC SDK {packageInfo.version} is older than 3.5.0 — " +
+                    $"[LN Export Helper] VRC SDK {packageInfo.version} is older than 3.5.0 — " +
                     "PhysBone fields may differ from expected.");
             }
         }

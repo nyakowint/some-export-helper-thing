@@ -12,7 +12,7 @@ namespace Nyako.ExportHelper.Editor
         {
             var comp = (PBToDBComponent)target;
 
-            EditorGUILayout.LabelField("Beat Saber Export Settings", EditorStyles.boldLabel);
+            EditorGUILayout.LabelField("Export Settings", EditorStyles.boldLabel);
             EditorGUILayout.Space(4);
 
             // --- Export Folder ---
@@ -30,7 +30,7 @@ namespace Nyako.ExportHelper.Editor
                     if (selected.StartsWith(Application.dataPath))
                         comp.exportFolder = "Assets" + selected.Substring(Application.dataPath.Length);
                     else
-                        Debug.LogWarning("[BeatSaberExport] Selected folder must be inside the project Assets folder.");
+                        Debug.LogWarning("[LN Export Helper] Selected folder must be inside the project Assets folder.");
                 }
             }
             EditorGUILayout.EndHorizontal();
@@ -50,7 +50,7 @@ namespace Nyako.ExportHelper.Editor
             var prevColor = GUI.backgroundColor;
             GUI.backgroundColor = new Color(0.4f, 0.8f, 1f);
 
-            if (GUILayout.Button("Export for Beat Saber", GUILayout.Height(40)))
+            if (GUILayout.Button("Bake avatar", GUILayout.Height(40)))
             {
                 GUI.backgroundColor = prevColor;
                 RunExport(comp);
@@ -79,7 +79,7 @@ namespace Nyako.ExportHelper.Editor
             while (avatarRoot.transform.parent != null)
                 avatarRoot = avatarRoot.transform.parent.gameObject;
 
-            Debug.Log($"[BeatSaberExport] Starting Beat Saber export bake on '{avatarRoot.name}'...");
+            Debug.Log($"[LN Export Helper] Starting export bake on '{avatarRoot.name}'...");
 
             // Run NDMF manual bake on the Generic platform.
             // PBToDBPass detects this platform and runs the full pipeline.

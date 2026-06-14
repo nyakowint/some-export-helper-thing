@@ -35,7 +35,7 @@ namespace Nyako.ExportHelper.Editor
             switch (pbc.shapeType)
             {
                 case VRCPhysBoneColliderBase.ShapeType.Plane:
-                    Debug.LogWarning($"[BeatSaberExport] {pbc.name}: Plane collider has no DynamicBone equivalent — skipped.");
+                    Debug.LogWarning($"[LN Export Helper] {pbc.name}: Plane collider has no DynamicBone equivalent — skipped.");
                     return null;
 
                 case VRCPhysBoneColliderBase.ShapeType.Sphere:

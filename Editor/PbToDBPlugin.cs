@@ -9,7 +9,7 @@ namespace Nyako.ExportHelper.Editor
     public class PbToDBPlugin : Plugin<PbToDBPlugin>
     {
         public override string QualifiedName => "cat.nyako.export-helper";
-        public override string DisplayName => "PhysBones → DynamicBones (Beat Saber Export)";
+        public override string DisplayName => "PhysBones → DynamicBones";
 
         protected override void Configure()
         {

@@ -32,7 +32,7 @@ namespace Nyako.ExportHelper.Editor
 
         /// <summary>
         /// Destroys all components whose assembly originates from VRC SDK packages.
-        /// Beat Saber does not support any VRC runtime components.
+        /// Most other platforms dont support any VRC components.
         /// </summary>
         private static void StripVrcComponents(GameObject avatarRoot)
         {

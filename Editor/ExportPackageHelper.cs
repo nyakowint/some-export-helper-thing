@@ -10,7 +10,7 @@ namespace Nyako.ExportHelper.Editor
         {
             if (string.IsNullOrEmpty(folderPath))
             {
-                Debug.LogWarning("[BeatSaberExport] No export folder set — skipping export step.");
+                Debug.LogWarning("[LN Export Helper] No export folder set — skipping export step.");
                 return;
             }
 
@@ -19,13 +19,13 @@ namespace Nyako.ExportHelper.Editor
 
             if (paths.Length == 0)
             {
-                Debug.LogWarning($"[BeatSaberExport] No assets found in '{folderPath}' — skipping export.");
+                Debug.LogWarning($"[LN Export Helper] No assets found in '{folderPath}' — skipping export.");
                 return;
             }
 
             AssetDatabase.ExportPackage(
                 paths,
-                "BeatSaber_Avatar_Export.unitypackage",
+                "LNE_Avatar.unitypackage",
                 ExportPackageOptions.Interactive |
                 ExportPackageOptions.Recurse |
                 ExportPackageOptions.IncludeDependencies
