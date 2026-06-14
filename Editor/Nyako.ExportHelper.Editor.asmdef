@@ -1,0 +1,32 @@
+{
+  "name": "Nyako.ExportHelper.Editor",
+  "rootNamespace": "Nyako.ExportHelper",
+  "references": [
+    "Nyako.ExportHelper.Runtime",
+    "nadena.dev.ndmf",
+    "nadena.dev.ndmf.runtime",
+    "DynamicBone"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": true,
+  "precompiledReferences": [
+    "VRC.Dynamics.dll",
+    "VRC.SDK3.Dynamics.PhysBone.dll",
+    "VRCSDK3A.dll",
+    "VRCSDKBase.dll"
+  ],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [
+    {
+      "name": "com.vrchat.avatars",
+      "expression": "",
+      "define": "EXPORTHELPER_VRCSDK_PRESENT"
+    }
+  ],
+  "noEngineReferences": false
+}

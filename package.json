@@ -1,0 +1,26 @@
+{
+  "name": "cat.nyako.export-helper",
+  "displayName": "LN // Export Helper",
+  "description": "Things to help export modular style avatars faster ish ~ currently an NDMF pass that converts PhysBones to Dynamic Bones and strips VRC components",
+  "version": "0.1.0",
+  "unity": "2022.3",
+  "keywords": [
+    "ndmf",
+    "tool",
+    "export",
+    "physbones",
+    "dynamicbones",
+    "beatsaber"
+  ],
+  "author": {
+    "name": "nyako"
+  },
+  "dependencies": {
+    "nadena.dev.ndmf": "1.5.0",
+    "com.vrchat.avatars": "3.5.0"
+  },
+  "vpmDependencies": {
+    "nadena.dev.ndmf": ">=1.5.0",
+    "com.vrchat.avatars": ">=3.5.0"
+  }
+}

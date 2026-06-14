@@ -1,0 +1,14 @@
+{
+  "name": "Nyako.ExportHelper.Runtime",
+  "rootNamespace": "Nyako.ExportHelper",
+  "references": [],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
