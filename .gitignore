@@ -1,0 +1,20 @@
+# IDE
+.vs/
+.idea/
+.vscode/
+
+# Generated project files
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+*.tmp
+*.pdb
+*.mdb
